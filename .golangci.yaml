@@ -1,0 +1,14 @@
+issues:
+  exclude-use-default: false
+  exclude-rules:
+    - text: "G107: Potential HTTP request made with variable url"
+      linters:
+        - gosec
+linters-settings:
+  gosec:
+    exclude-rules:
+      G107
+linters:
+  enable-all: true
+  disable:
+    gochecknoglobals
