@@ -8,13 +8,14 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "cover": "react-scripts test --coverage",
-    "format": "prettier -l 'src/**/*.{js,json,md,css}'",
-    "lint": "eslint src/**/*.js",
-    "watch": "react-scripts test"
+    "start": "node_modules/.bin/react-scripts start",
+    "build": "node_modules/.bin/react-scripts build",
+    "test": "node_modules/.bin/react-scripts test",
+    "cover": "node_modules/.bin/react-scripts test --coverage",
+    "check-format": "node_modules/.bin/prettier -l 'src/**/*.{js,json,md,css}'",
+    "format": "node_modules/.bin/prettier --write 'src/**/*.{js,json,md,css}'",
+    "lint": "node_modules/.bin/eslint src/**/*.js",
+    "watch": "node_modules/.bin/react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.17.1",
+    "react-script": "^2.0.5"
   }
 }
