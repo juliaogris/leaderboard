@@ -19,12 +19,18 @@ on [anz-bank/go-course](https://github.com/anz-bank/go-course).
 
 ### Make
 
-Build, test, lint and ensure coverage for this project with
+Build, test, lint and check coverage for this project with
 
+    cd backend
     make
 
 Produce a coverage report with
 
     make cover
 
-Alternatively execute the commands given in the [Makefile](Makefile) separately in your terminal.
+Run the project with
+
+    make run
+
+Alternatively execute the commands given in the [`Makefile`](backend/Makefile)
+separately in your terminal.

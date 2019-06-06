@@ -1,19 +1,19 @@
 steps:
-  - id: version
+  - id: go-version
     name: 'gcr.io/cloud-builders/go:debian'
     env: ['GOPATH=/workspace/_gopath', 'GO111MODULE=on']
     args: ['version']
-  - id: test
+  - id: backend-test
     name: 'gcr.io/cloud-builders/go:debian'
     env: ['GOPATH=/workspace/_gopath', 'GO111MODULE=on']
     entrypoint: 'make'
-    args: ['test']
-  - id: lint
+    args: ['-C', 'backend', 'test']
+  - id: backend-lint
     name: 'golangci/golangci-lint'
     entrypoint: 'make'
-    args: ['lint']
-  - id: cover
+    args: ['-C', 'backend', 'lint']
+  - id: backend-cover
     name: 'gcr.io/cloud-builders/go:debian'
     env: ['GOPATH=/workspace/_gopath', 'GO111MODULE=on']
     entrypoint: 'make'
-    args: ['ensure-coverage']
+    args: ['-C', 'backend', 'check-coverage']
