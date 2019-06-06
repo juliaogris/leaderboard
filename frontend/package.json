@@ -11,10 +11,23 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "cover": "react-scripts test --coverage",
+    "format": "prettier -l 'src/**/*.{js,json,md,css}'",
+    "lint": "eslint src/**/*.js",
+    "watch": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 2,
+        "branches": 0,
+        "functions": 6,
+        "lines": 2
+      }
+    }
   },
   "browserslist": {
     "production": [
