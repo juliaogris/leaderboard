@@ -1,6 +1,8 @@
 package leader
 
 import (
+	"fmt"
+	"hash/fnv"
 	"regexp"
 	"sort"
 	"time"
@@ -63,8 +65,9 @@ type Author struct {
 // ChartData holds all aggregate PR, review and comment data relevant to
 // visualisation.
 type ChartData struct {
+	ID              string            `json:"id"`
 	Authors         map[string]Author `json:"authors"` // keyed by author.login (github username)
-	Charts          []Chart           `json:"chart"`
+	Charts          []Chart           `json:"charts"`
 	BotCommentCount int               `json:"botComments"`
 	Repository      Repository        `json:"repository"`
 }
@@ -141,6 +144,7 @@ func ChartDataFromPRs(gqlPRs []PRNode, config ChartDataConfig) ChartData {
 	delete(countByAuthor.comment, config.BotName)
 	delete(countByAuthor.review, config.BotName)
 	return ChartData{
+		ID:              chartID(config),
 		Authors:         authors,
 		BotCommentCount: botCommentCount,
 		Charts:          charts(countByAuthor),
@@ -201,4 +205,12 @@ func hasLabLabel(labels []Label, re *regexp.Regexp) bool {
 		}
 	}
 	return false
+}
+
+func chartID(config ChartDataConfig) string {
+	h := fnv.New64a()
+	s := fmt.Sprintf("%v", config)
+	_, _ = h.Write([]byte(s))
+	hash := h.Sum64()
+	return fmt.Sprintf("%s-%x", config.Repository.Name, hash)
 }
