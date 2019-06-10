@@ -1,0 +1,49 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/react-scripts start",
+    "build": "node_modules/.bin/react-scripts build",
+    "test": "node_modules/.bin/react-scripts test",
+    "cover": "node_modules/.bin/react-scripts test --coverage",
+    "check-format": "node_modules/.bin/prettier -l 'src/**/*.{js,json,md,css}'",
+    "format": "node_modules/.bin/prettier --write 'src/**/*.{js,json,md,css}'",
+    "lint": "node_modules/.bin/eslint src/**/*.js",
+    "watch": "node_modules/.bin/react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 2,
+        "branches": 0,
+        "functions": 6,
+        "lines": 2
+      }
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "prettier": "^1.17.1",
+    "react-script": "^2.0.5"
+  }
+}

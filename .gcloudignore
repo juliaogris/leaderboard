@@ -1,0 +1,5 @@
+.git
+coverage.out
+backend/coverage.out
+frontend/node_modules
+frontend/build
