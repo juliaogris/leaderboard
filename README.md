@@ -30,8 +30,6 @@ and transformation into aggregated, chartable data.
 -   Install [go 1.12](https://golang.org/doc/install)
 -   Install [golangci-lint 1.16](https://github.com/golangci/golangci-lint#install)
 -   Install `make`
--   Install [node.js](https://nodejs.org)
--   Install [yarn](https://yarnpkg.com)
 
 #### Make
 
@@ -62,27 +60,38 @@ interactive SVG bar charts.
 
 #### Prerequisites
 
--   Install [node](https://nodejs.org/en/download/)
+-   Install [node.js](https://nodejs.org)
+-   Install [yarn](https://yarnpkg.com)
 -   Install `make`
 
 #### Make
 
-Run, build, test, lint, format and check coverage for this project with
+Build, test and lint the frontend with
 
     cd frontend
     make
 
-Produce a coverage report in file watch mode with
+Alternatively execute the commands given in the
+[`Makefile`](frontend/Makefile). The details of the yarn commands can be found
+in [`package.json`](frontend/package.json).
 
-    make cover
+##### Run in development mode
 
-Run frontend in development mode with
+Start stubbed backend service in one terminal
+
+    make serve-stub
+
+Run frontend in ReactJS development mode with in separate terminal
 
     make start
 
-Alternatively execute the commands given in the [`Makefile`](frontend/Makefile)
-separately in your terminal the details of the yarn commands can be found at
-[`package.json`](frontend/package.json).
+##### View coverage report in file watch mode
+
+    make cover
+
+##### Serve build output
+
+    make serve-build
 
 ## CI
 
