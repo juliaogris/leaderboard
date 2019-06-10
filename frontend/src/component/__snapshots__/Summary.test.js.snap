@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot charts 1`] = `
+Array [
+  <p>
+    <b>
+      5
+       authors
+    </b>
+     created
+    <b>
+       16 Merged Pull Requests
+    </b>
+    , with a highest individual contribution of 
+    4
+    .
+  </p>,
+  <p>
+    <b>
+      7
+       authors
+    </b>
+     created
+    <b>
+       73 Merged or Open Pull Requests
+    </b>
+    , with a highest individual contribution of 
+    5
+    .
+  </p>,
+  <p>
+    <b>
+      3
+       authors
+    </b>
+     created
+    <b>
+       382 Code Reviews
+    </b>
+     and
+    <b>
+       852 Code Review Comments
+    </b>
+  </p>,
+]
+`;
+
+exports[`matches snapshot charts with unknown title 1`] = `null`;
+
+exports[`matches snapshot for empty charts array 1`] = `null`;

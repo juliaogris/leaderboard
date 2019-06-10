@@ -14,7 +14,7 @@
     "cover": "node_modules/.bin/react-scripts test --coverage",
     "check-format": "node_modules/.bin/prettier -l 'src/**/*.{js,json,md,css}'",
     "format": "node_modules/.bin/prettier --write 'src/**/*.{js,json,md,css}'",
-    "lint": "node_modules/.bin/eslint src/**/*.js",
+    "lint": "node_modules/.bin/eslint src/**/*.js --max-warnings=0",
     "watch": "node_modules/.bin/react-scripts test",
     "serve-stub": "node_modules/.bin/serve -l 5000 -s stub_data",
     "serve-build": "node_modules/.bin/serve -l 5000 -s build"
@@ -23,12 +23,17 @@
     "extends": "react-app"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/serviceWorker.js"
+    ],
     "coverageThreshold": {
       "global": {
-        "statements": 2,
-        "branches": 0,
-        "functions": 6,
-        "lines": 2
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
       }
     }
   },
@@ -45,8 +50,11 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "prettier": "^1.17.1",
     "react-script": "^2.0.5",
+    "react-test-renderer": "^16.8.6",
     "serve": "^11.0.1"
   },
   "proxy": "http://localhost:5000"
