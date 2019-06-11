@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "./screen/App"
+import { App } from "./screen/App"
+import "tachyons/css/tachyons.css"
 import * as serviceWorker from "./serviceWorker"
 
 // TODO(juliaogris): retrieve url from somewhere reasonable else ;)

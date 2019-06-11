@@ -2,33 +2,30 @@
 
 exports[`matches snapshot charts 1`] = `
 Array [
-  <p>
+  <p
+    className="lh-copy measure"
+  >
     <b>
       5
-       authors
-    </b>
-     created
-    <b>
-       16 Merged Pull Requests
+       people merged 
+      16
+       Pull Requests
     </b>
     , with a highest individual contribution of 
     4
-    .
-  </p>,
-  <p>
+    . There are an additional 
     <b>
-      7
-       authors
+      57
+       open PRs
     </b>
-     created
-    <b>
-       73 Merged or Open Pull Requests
-    </b>
-    , with a highest individual contribution of 
+     
+    in the works. The highest individual contribution of open and merged PRs is 
     5
     .
   </p>,
-  <p>
+  <p
+    className="lh-copy measure"
+  >
     <b>
       3
        authors
@@ -41,6 +38,7 @@ Array [
     <b>
        852 Code Review Comments
     </b>
+    .
   </p>,
 ]
 `;

@@ -1,4 +1,3 @@
-import React from "react"
 import requestJson from "./Service"
 
 const mockResponse = (ok, status, responseObj) => {

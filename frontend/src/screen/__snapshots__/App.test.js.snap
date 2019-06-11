@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppContainer matches snapshot 1`] = `
+<div
+  className="center avenir black-80 mw100 mw7-ns pa3 ph5-ns"
+/>
+`;
+
+exports[`Err matches snapshot 1`] = `
+<div
+  className="center avenir black-80 mw100 mw7-ns pa3 ph5-ns"
+>
+  <h1
+    className="f2 fw6 pv1 pv3-ns"
+  >
+    Something went wrong
+  </h1>
+</div>
+`;
+
+exports[`Loading matches snapshot 1`] = `
+<div
+  className="center avenir black-80 mw100 mw7-ns pa3 ph5-ns"
+>
+  <h1
+    className="f2 fw6 pv1 pv3-ns"
+  >
+    Loading
+  </h1>
+</div>
+`;

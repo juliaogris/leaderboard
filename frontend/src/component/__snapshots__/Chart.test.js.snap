@@ -2,14 +2,32 @@
 
 exports[`matches snapshot charts with unknown title 1`] = `
 Array [
-  <h2>
+  <h2
+    className="f4 f3-ns fw6 pt3"
+  >
     My Chart
   </h2>,
-  <table>
+  <table
+    className="dt--fixed collapse f7 f6-ns"
+  >
     <tbody>
-      <tr>
-        <td>
+      <tr
+        className="w-100"
+      >
+        <td
+          className="w2 pr1 pt1"
+        >
+          <img
+            alt="avatar"
+            className="h1 w1"
+            src="https://avatars3.githubusercontent.com/u/22388715?v=4"
+          />
+        </td>
+        <td
+          className="w4 pt1 truncate"
+        >
           <a
+            className="link"
             href="https://github.com/a"
             rel="noopener noreferrer"
             target="_blank"
@@ -17,13 +35,44 @@ Array [
             a
           </a>
         </td>
-        <td>
+        <td
+          className="w2 pt1"
+        >
           1
         </td>
+        <td
+          className="w-100"
+        >
+          <div
+            className="bg-blue"
+            style={
+              Object {
+                "height": "1rem",
+                "width": "33.33333333333333%",
+              }
+            }
+          >
+             
+          </div>
+        </td>
       </tr>
-      <tr>
-        <td>
+      <tr
+        className="w-100"
+      >
+        <td
+          className="w2 pr1 pt1"
+        >
+          <img
+            alt="avatar"
+            className="h1 w1"
+            src="https://avatars0.githubusercontent.com/u/6849798?v=4"
+          />
+        </td>
+        <td
+          className="w4 pt1 truncate"
+        >
           <a
+            className="link"
             href="https://github.com/b"
             rel="noopener noreferrer"
             target="_blank"
@@ -31,22 +80,70 @@ Array [
             b
           </a>
         </td>
-        <td>
+        <td
+          className="w2 pt1"
+        >
           2
         </td>
+        <td
+          className="w-100"
+        >
+          <div
+            className="bg-blue"
+            style={
+              Object {
+                "height": "1rem",
+                "width": "66.66666666666666%",
+              }
+            }
+          >
+             
+          </div>
+        </td>
       </tr>
-      <tr>
-        <td>
+      <tr
+        className="w-100"
+      >
+        <td
+          className="w2 pr1 pt1"
+        >
+          <img
+            alt="avatar"
+            className="h1 w1"
+            src="missing-avatar-url"
+          />
+        </td>
+        <td
+          className="w4 pt1 truncate"
+        >
           <a
+            className="link"
             href=""
             rel="noopener noreferrer"
             target="_blank"
           >
-            C
+            c
           </a>
         </td>
-        <td>
+        <td
+          className="w2 pt1"
+        >
           3
+        </td>
+        <td
+          className="w-100"
+        >
+          <div
+            className="bg-blue"
+            style={
+              Object {
+                "height": "1rem",
+                "width": "100%",
+              }
+            }
+          >
+             
+          </div>
         </td>
       </tr>
     </tbody>

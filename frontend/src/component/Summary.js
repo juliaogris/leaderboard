@@ -16,30 +16,36 @@ const Summary = ({ charts }) => {
   const commentChart = chartsByTitle["Code Review Comments"] || null
   return (
     <Fragment>
-      <ChartSummary chart={prChart} />
-      <ChartSummary chart={openChart} />
+      <PrSummary prChart={prChart} openChart={openChart} />
       <ReviewSummary reviewChart={reviewChart} commentChart={commentChart} />
     </Fragment>
   )
 }
 
-const ChartSummary = ({ chart }) =>
-  chart && (
-    <p>
-      <b>{chart.points.length} authors</b> created
-      <b>{` ${chart.totalCount} ${chart.title}`}</b>, with a highest individual
-      contribution of {chart.maxCount}.
-    </p>
+const P = ({ children }) => <p className="lh-copy measure">{children}</p>
+
+const PrSummary = ({ prChart, openChart }) =>
+  prChart &&
+  openChart && (
+    <P>
+      <b>
+        {prChart.points.length} people merged {prChart.totalCount} Pull Requests
+      </b>
+      , with a highest individual contribution of {prChart.maxCount}. There are
+      an additional <b>{openChart.totalCount - prChart.totalCount} open PRs</b>{" "}
+      in the works. The highest individual contribution of open and merged PRs
+      is {openChart.maxCount}.
+    </P>
   )
 
 const ReviewSummary = ({ reviewChart, commentChart }) =>
   reviewChart &&
   commentChart && (
-    <p>
+    <P>
       <b>{reviewChart.points.length} authors</b> created
       <b>{` ${reviewChart.totalCount} ${reviewChart.title}`}</b> and
-      <b>{` ${commentChart.totalCount} ${commentChart.title}`}</b>
-    </p>
+      <b>{` ${commentChart.totalCount} ${commentChart.title}`}</b>.
+    </P>
   )
 
 export default Summary

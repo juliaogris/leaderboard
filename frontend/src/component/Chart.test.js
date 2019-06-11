@@ -10,7 +10,7 @@ test("matches snapshot charts with unknown title", () => {
     points: [
       { author: "a", count: "1" },
       { author: "b", count: "2" },
-      { author: "C", count: "3" }
+      { author: "c", count: "3" }
     ]
   }
   const authors = {
@@ -23,11 +23,6 @@ test("matches snapshot charts with unknown title", () => {
       login: "b",
       url: "https://github.com/b",
       avatarURL: "https://avatars0.githubusercontent.com/u/6849798?v=4"
-    },
-    c: {
-      login: "c",
-      url: "https://github.com/c",
-      avatarURL: "https://avatars2.githubusercontent.com/u/32605850?v=4"
     }
   }
 

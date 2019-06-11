@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot 1`] = `
-<h1>
-  Leader board for
-   
+<h1
+  className="f2 fw6 pv1 pv3-ns"
+>
   <a
+    className="link ttc"
     href="https://github.com/my-owner/my-repo"
     rel="noopener noreferrer"
     target="_blank"
   >
-    my-owner
-    /
     my-repo
   </a>
+   Leaderboard
 </h1>
 `;

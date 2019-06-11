@@ -1,9 +1,28 @@
 import React from "react"
-import App from "./App"
+import renderer from "react-test-renderer"
 import Adapter from "enzyme-adapter-react-16"
 import { shallow, configure } from "enzyme"
+import { App, AppContainer, Loading, Err } from "./App"
 
 configure({ adapter: new Adapter() })
+
+test("AppContainer matches snapshot", () => {
+  const tree = renderer.create(<AppContainer />).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+test("Loading matches snapshot", () => {
+  const tree = renderer.create(<Loading />).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+test("Err matches snapshot", () => {
+  console.error = jest.fn()
+  const tree = renderer.create(<Err />).toJSON()
+  expect(tree).toMatchSnapshot()
+  expect(console.error).toBeCalled()
+  console.error.mockRestore()
+})
 
 test("chartData update for good fetch", async () => {
   const promise = new Promise((resolve, reject) => {
