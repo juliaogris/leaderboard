@@ -30,6 +30,8 @@ and transformation into aggregated, chartable data.
 -   Install [go 1.12](https://golang.org/doc/install)
 -   Install [golangci-lint 1.16](https://github.com/golangci/golangci-lint#install)
 -   Install `make`
+-   Install [node.js](https://nodejs.org)
+-   Install [yarn](https://yarnpkg.com)
 
 #### Make
 
