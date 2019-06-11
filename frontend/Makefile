@@ -15,8 +15,6 @@ cover: node_modules
 	yarn cover
 start: node_modules
 	yarn start
-serve-stub: node_modules
-	yarn serve-stub
 serve-build: build
 	yarn serve-build
 install: node_modules
