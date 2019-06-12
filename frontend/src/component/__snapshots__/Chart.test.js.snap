@@ -1,11 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot charts with unknown title 1`] = `
+exports[`matches Chart snapshot charts with unknown title 1`] = `
 Array [
   <h2
-    className="f4 f3-ns fw6 pt3"
+    className="f4 f3-ns fw6 pt4 pb2-ns"
   >
-    My Chart
+    <a
+      className="link black-80 hover-blue underline-hover"
+      href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      My Chart
+    </a>
   </h2>,
   <table
     className="dt--fixed collapse f7 f6-ns"
@@ -17,17 +24,23 @@ Array [
         <td
           className="w2 pr1 pt1"
         >
-          <img
-            alt="avatar"
-            className="h1 w1"
-            src="https://avatars3.githubusercontent.com/u/22388715?v=4"
-          />
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/a"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="avatar"
+              className="h1 w1"
+            />
+          </a>
         </td>
         <td
           className="w4 pt1 truncate"
         >
           <a
-            className="link"
+            className="link black-80 hover-blue underline-hover"
             href="https://github.com/a"
             rel="noopener noreferrer"
             target="_blank"
@@ -38,22 +51,36 @@ Array [
         <td
           className="w2 pt1"
         >
-          1
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Aa"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            1
+          </a>
         </td>
         <td
           className="w-100"
         >
-          <div
-            className="bg-blue"
-            style={
-              Object {
-                "height": "1rem",
-                "width": "33.33333333333333%",
-              }
-            }
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Aa"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-             
-          </div>
+            <div
+              className="bg-blue dim"
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "33.33333333333333%",
+                }
+              }
+            >
+               
+            </div>
+          </a>
         </td>
       </tr>
       <tr
@@ -62,17 +89,23 @@ Array [
         <td
           className="w2 pr1 pt1"
         >
-          <img
-            alt="avatar"
-            className="h1 w1"
-            src="https://avatars0.githubusercontent.com/u/6849798?v=4"
-          />
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/b"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="avatar"
+              className="h1 w1"
+            />
+          </a>
         </td>
         <td
           className="w4 pt1 truncate"
         >
           <a
-            className="link"
+            className="link black-80 hover-blue underline-hover"
             href="https://github.com/b"
             rel="noopener noreferrer"
             target="_blank"
@@ -83,22 +116,36 @@ Array [
         <td
           className="w2 pt1"
         >
-          2
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Ab"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            2
+          </a>
         </td>
         <td
           className="w-100"
         >
-          <div
-            className="bg-blue"
-            style={
-              Object {
-                "height": "1rem",
-                "width": "66.66666666666666%",
-              }
-            }
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Ab"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-             
-          </div>
+            <div
+              className="bg-blue dim"
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "66.66666666666666%",
+                }
+              }
+            >
+               
+            </div>
+          </a>
         </td>
       </tr>
       <tr
@@ -107,17 +154,24 @@ Array [
         <td
           className="w2 pr1 pt1"
         >
-          <img
-            alt="avatar"
-            className="h1 w1"
-            src="missing-avatar-url"
-          />
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href=""
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="avatar"
+              className="h1 w1"
+              src="missing-avatar-url"
+            />
+          </a>
         </td>
         <td
           className="w4 pt1 truncate"
         >
           <a
-            className="link"
+            className="link black-80 hover-blue underline-hover"
             href=""
             rel="noopener noreferrer"
             target="_blank"
@@ -128,25 +182,47 @@ Array [
         <td
           className="w2 pt1"
         >
-          3
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Ac"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            3
+          </a>
         </td>
         <td
           className="w-100"
         >
-          <div
-            className="bg-blue"
-            style={
-              Object {
-                "height": "1rem",
-                "width": "100%",
-              }
-            }
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Ac"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-             
-          </div>
+            <div
+              className="bg-blue dim"
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "100%",
+                }
+              }
+            >
+               
+            </div>
+          </a>
         </td>
       </tr>
     </tbody>
   </table>,
 ]
+`;
+
+exports[`matches Heading snapshot 1`] = `
+<h2
+  className="f4 f3-ns fw6 pt4 pb2-ns"
+>
+  Code Reviews
+</h2>
 `;

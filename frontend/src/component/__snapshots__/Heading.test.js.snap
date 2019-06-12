@@ -2,10 +2,10 @@
 
 exports[`matches snapshot 1`] = `
 <h1
-  className="f2 fw6 pv1 pv3-ns"
+  className="f2 fw6 pv1 pt4-ns pb3-ns"
 >
   <a
-    className="link ttc"
+    className="link ttc black-80 hover-blue"
     href="https://github.com/my-owner/my-repo"
     rel="noopener noreferrer"
     target="_blank"

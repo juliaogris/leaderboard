@@ -34,7 +34,25 @@ test("matches snapshot charts", () => {
       points: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     }
   ]
-  const tree = renderer.create(<Summary charts={charts} />).toJSON()
+  const config = {
+    labelGlob: "lab.*",
+    botName: "golangcibot",
+    createdAfter: "2019-05-15T00:00:00Z",
+    repository: {
+      name: "go-course",
+      owner: "anz-bank",
+      url: "https://github.com/anz-bank/go-course"
+    }
+  }
+  const bot = {
+    login: "golangcibot",
+    url: "https://github.com/golangcibot",
+    avatarUrl: "https://avatars1.githubusercontent.com/u/42910462?v=4",
+    comments: 2000
+  }
+  const tree = renderer
+    .create(<Summary charts={charts} config={config} bot={bot} />)
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })
 
@@ -47,6 +65,19 @@ test("matches snapshot charts with unknown title", () => {
       points: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     }
   ]
-  const tree = renderer.create(<Summary charts={charts} />).toJSON()
+  const config = {
+    labelGlob: "lab.*",
+    botName: "golangcibot",
+    createdAfter: "2019-05-15T00:00:00Z",
+    repository: {
+      name: "go-course",
+      owner: "anz-bank",
+      url: "https://github.com/anz-bank/go-course"
+    }
+  }
+
+  const tree = renderer
+    .create(<Summary charts={charts} config={config} />)
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })

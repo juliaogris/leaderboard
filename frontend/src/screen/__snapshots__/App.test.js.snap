@@ -11,10 +11,36 @@ exports[`Err matches snapshot 1`] = `
   className="center avenir black-80 mw100 mw7-ns pa3 ph5-ns"
 >
   <h1
-    className="f2 fw6 pv1 pv3-ns"
+    className="f2 fw6 pv1 pt4-ns pb3-ns"
   >
     Something went wrong
   </h1>
+</div>
+`;
+
+exports[`Footer matches snapshot 1`] = `
+<div
+  className="bt b--black-20 pv3 mt5 f7 measure"
+>
+  Made with
+   
+  <span
+    aria-label="heart"
+    role="img"
+  >
+    ❤️
+  </span>
+   
+  by
+   
+  <a
+    className="link black-80 underline-hover hover-blue"
+    href="https://github.com/juliaogris/leaderboard/graphs/contributors"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Open Source Contributors
+  </a>
 </div>
 `;
 
@@ -23,7 +49,7 @@ exports[`Loading matches snapshot 1`] = `
   className="center avenir black-80 mw100 mw7-ns pa3 ph5-ns"
 >
   <h1
-    className="f2 fw6 pv1 pv3-ns"
+    className="f2 fw6 pv1 pt4-ns pb3-ns"
   >
     Loading
   </h1>

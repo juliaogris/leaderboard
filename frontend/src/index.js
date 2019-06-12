@@ -4,7 +4,7 @@ import { App } from "./screen/App"
 import "tachyons/css/tachyons.css"
 import * as serviceWorker from "./serviceWorker"
 
-// TODO(juliaogris): retrieve url from somewhere reasonable else ;)
+// todo(juliaogris): Retrieve URL from somewhere reasonable else ;)
 ReactDOM.render(<App url="data.json" />, document.getElementById("root"))
 
 // If you want your app to work offline and load faster, you can change
