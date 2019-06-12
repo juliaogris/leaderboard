@@ -11,10 +11,11 @@ import (
 // Config returns configuration for retrieving data via GitHub API (query)
 // and building aggregated Chart Data
 func Config() (Configuration, error) {
-	// TODO(juliaogris): read from config file and/or command line
+	// todo(juliaogris): Read from config file and/or command line
 	initialCursor := ""
 	createdAfter, _ := time.Parse(time.RFC3339, "2019-05-15T00:00:00Z")
-	labelPattern := `^lab`
+	labelGlob := `lab*`
+	labelRe := `^lab\d`
 	botName := "golangcibot"
 	repoOwner := "anz-bank"
 	repoName := "go-course"
@@ -31,7 +32,8 @@ func Config() (Configuration, error) {
 		URL:   fmt.Sprintf("https://github.com/%s/%s", repoOwner, repoName),
 	}
 	chartConfig := ChartDataConfig{
-		LabelRegexp:  regexp.MustCompile(labelPattern),
+		LabelGlob:    labelGlob,
+		LabelRegexp:  regexp.MustCompile(labelRe),
 		BotName:      botName,
 		CreatedAfter: createdAfter,
 		Repository:   repo,
@@ -60,10 +62,11 @@ type Configuration struct {
 // ChartDataConfig contains filters, constants and meta data for aggregating
 // chartable data from PRs
 type ChartDataConfig struct {
-	LabelRegexp  *regexp.Regexp
-	BotName      string
-	CreatedAfter time.Time
-	Repository   Repository
+	LabelRegexp  *regexp.Regexp `json:"-"`
+	LabelGlob    string         `json:"labelGlob"`
+	BotName      string         `json:"botName"`
+	CreatedAfter time.Time      `json:"createdAfter"`
+	Repository   Repository     `json:"repository"`
 }
 
 // QueryConfig contains values for building the GitHub GraphQL query to

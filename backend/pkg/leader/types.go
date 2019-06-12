@@ -59,7 +59,7 @@ type Label struct {
 type Author struct {
 	Login     string `json:"login"`
 	URL       string `json:"url"`
-	AvatarURL string `json:"avatarURL"`
+	AvatarURL string `json:"avatarUrl"`
 }
 
 // ChartData holds all aggregate PR, review and comment data relevant to
@@ -69,7 +69,7 @@ type ChartData struct {
 	Authors         map[string]Author `json:"authors"` // keyed by author.login (github username)
 	Charts          []Chart           `json:"charts"`
 	BotCommentCount int               `json:"botComments"`
-	Repository      Repository        `json:"repository"`
+	Config          ChartDataConfig   `json:"config"`
 }
 
 // Chart contains data points, aggregated and meta data for charting.
@@ -148,7 +148,7 @@ func ChartDataFromPRs(gqlPRs []PRNode, config ChartDataConfig) ChartData {
 		Authors:         authors,
 		BotCommentCount: botCommentCount,
 		Charts:          charts(countByAuthor),
-		Repository:      config.Repository,
+		Config:          config,
 	}
 }
 
@@ -186,7 +186,12 @@ func chart(countByAuthor map[string]int, title string) Chart {
 		total += count
 		i++
 	}
-	sort.Slice(points, func(i, j int) bool { return points[i].Count > points[j].Count })
+	sort.Slice(points, func(i, j int) bool {
+		if points[i].Count == points[j].Count {
+			return points[i].Author < points[j].Author
+		}
+		return points[i].Count > points[j].Count
+	})
 	return Chart{
 		Title:      title,
 		Points:     points,

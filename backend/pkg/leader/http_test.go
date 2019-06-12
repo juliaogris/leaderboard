@@ -28,7 +28,7 @@ func TestQueryAPI(t *testing.T) {
 	prs, err := QueryAPI(config)
 	assert.NoError(t, err)
 	assert.NotNil(t, prs)
-	assert.Len(t, prs, 3)
+	assert.Len(t, prs, 4)
 }
 
 func TestQueryAPIPaging(t *testing.T) {
@@ -51,7 +51,7 @@ func TestQueryAPIPaging(t *testing.T) {
 	prs, err := QueryAPI(config)
 	assert.NoError(t, err)
 	assert.NotNil(t, prs)
-	assert.Len(t, prs, 3)
+	assert.Len(t, prs, 4)
 }
 
 func TestQueryAPIPagingError(t *testing.T) {
