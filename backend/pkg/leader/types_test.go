@@ -21,8 +21,10 @@ func TestChartDataFromGQL(t *testing.T) {
 	gql := graphQLdata{}
 	assert.NoError(t, json.Unmarshal([]byte(prResultFixture), &gql))
 	prs := gql.Data.Repository.PullRequests.PRNodes
-	got := ChartDataFromPRs(prs, ChartDataConfig{})
+	config := ChartDataConfig{}
+	got := ChartDataFromPRs(prs, config)
 	expected := ChartData{
+		ID: chartID(config),
 		Authors: map[string]Author{
 			"kasunfdo": {
 				Login:     "kasunfdo",
@@ -39,6 +41,11 @@ func TestChartDataFromGQL(t *testing.T) {
 				URL:       "https://github.com/dummy",
 				AvatarURL: "https://avatars3.githubusercontent.com/u/12541719?v=4",
 			},
+			"dummy2": {
+				Login:     "dummy2",
+				URL:       "https://github.com/dummy2",
+				AvatarURL: "https://avatars3.githubusercontent.com/u/12541729?v=4",
+			},
 		},
 		Charts: []Chart{
 			{
@@ -52,10 +59,11 @@ func TestChartDataFromGQL(t *testing.T) {
 			{
 				Title: "Merged or Open Pull Requests",
 				Points: []Point{
-					{Author: "dummy", Count: 2},
+					{Author: "dummy2", Count: 2},
+					{Author: "dummy", Count: 1},
 					{Author: "kasunfdo", Count: 1},
 				},
-				TotalCount: 3,
+				TotalCount: 4,
 				MaxCount:   2,
 			},
 			{
@@ -78,9 +86,12 @@ func TestChartDataFromGQL(t *testing.T) {
 	}
 	assert.Equal(t, expected, got)
 
-	got = ChartDataFromPRs(prs, ChartDataConfig{
+	config = ChartDataConfig{
 		LabelRegexp: regexp.MustCompile("^lab"),
-	})
+	}
+	got = ChartDataFromPRs(prs, config)
+	expected.ID = chartID(config)
+	expected.Config = config
 	assert.Equal(t, expected, got)
 }
 
@@ -88,12 +99,15 @@ func TestSkipWithoutLabLabel(t *testing.T) {
 	gql := graphQLdata{}
 	assert.NoError(t, json.Unmarshal([]byte(prResultFixtureForFilters), &gql))
 	prs := gql.Data.Repository.PullRequests.PRNodes
-	got := ChartDataFromPRs(prs, ChartDataConfig{
+	config := ChartDataConfig{
 		LabelRegexp: regexp.MustCompile("^lab"),
-	})
+	}
+	got := ChartDataFromPRs(prs, config)
 	expected := ChartData{
+		ID:      chartID(config),
 		Authors: map[string]Author{},
 		Charts:  []Chart{},
+		Config:  config,
 	}
 	assert.Equal(t, expected, got)
 }
@@ -103,12 +117,15 @@ func TestSkipBeforeCreatedAfter(t *testing.T) {
 	assert.NoError(t, json.Unmarshal([]byte(prResultFixtureForFilters), &gql))
 	prs := gql.Data.Repository.PullRequests.PRNodes
 	createdAt, _ := time.Parse(time.RFC3339, "2019-05-24T11:24:48Z")
-	got := ChartDataFromPRs(prs, ChartDataConfig{
+	config := ChartDataConfig{
 		CreatedAfter: createdAt,
-	})
+	}
+	got := ChartDataFromPRs(prs, config)
 	expected := ChartData{
+		ID:      chartID(config),
 		Authors: map[string]Author{},
 		Charts:  []Chart{},
+		Config:  config,
 	}
 	assert.Equal(t, expected, got)
 }
@@ -133,7 +150,7 @@ const prResultFixture = `{
             "author": {
               "login": "kasunfdo",
               "url": "https://github.com/kasunfdo",
-              "avatarURL": "https://avatars3.githubusercontent.com/u/12541716?v=4"
+              "avatarUrl": "https://avatars3.githubusercontent.com/u/12541716?v=4"
             },
             "reviews": {
               "nodes": [
@@ -141,7 +158,7 @@ const prResultFixture = `{
                   "author": {
                     "login": "marcelocantos",
                     "url": "https://github.com/marcelocantos",
-                    "avatarURL": "https://avatars3.githubusercontent.com/u/215143?v=4"
+                    "avatarUrl": "https://avatars3.githubusercontent.com/u/215143?v=4"
                   },
                   "comments": { "totalCount": 5 }
                 }
@@ -158,7 +175,7 @@ const prResultFixture = `{
             "author": {
               "login": "dummy",
               "url": "https://github.com/dummy",
-              "avatarURL": "https://avatars3.githubusercontent.com/u/12541719?v=4"
+              "avatarUrl": "https://avatars3.githubusercontent.com/u/12541719?v=4"
             },
             "reviews": {
               "nodes": [ ]
@@ -169,18 +186,34 @@ const prResultFixture = `{
             "number": 133,
             "url": "https://github.com/anz-bank/go-course/pull/133",
             "state": "OPEN",
-            "title": "Dummy - with label2",
-            "createdAt": "2019-05-26T11:24:48Z",
+            "title": "Dummy2 - with label",
+            "createdAt": "2019-05-24T11:24:48Z",
             "author": {
-              "login": "dummy",
-              "url": "https://github.com/dummy",
-              "avatarURL": "https://avatars3.githubusercontent.com/u/12541719?v=4"
+              "login": "dummy2",
+              "url": "https://github.com/dummy2",
+              "avatarUrl": "https://avatars3.githubusercontent.com/u/12541729?v=4"
+            },
+            "reviews": {
+              "nodes": [ ]
+            },
+            "labels": { "nodes": [{"name": "lab1"} ] }
+          },
+          {
+            "number": 134,
+            "url": "https://github.com/anz-bank/go-course/pull/134",
+            "state": "OPEN",
+            "title": "Dummy2 - lab 2",
+            "createdAt": "2019-05-24T11:24:48Z",
+            "author": {
+              "login": "dummy2",
+              "url": "https://github.com/dummy2",
+              "avatarUrl": "https://avatars3.githubusercontent.com/u/12541729?v=4"
             },
             "reviews": {
               "nodes": [ ]
             },
             "labels": { "nodes": [{"name": "lab2"} ] }
-      }
+          }
         ]
       }
     }
@@ -208,7 +241,7 @@ const prResultFixtureForFilters = `{
             "author": {
               "login": "dummy",
               "url": "https://github.com/dummy",
-              "avatarURL": "https://avatars3.githubusercontent.com/u/12541719?v=4"
+              "avatarUrl": "https://avatars3.githubusercontent.com/u/12541719?v=4"
             }
       }
         ]

@@ -25,7 +25,8 @@ func TestConfig(t *testing.T) {
 
 	expected := Configuration{
 		ChartConfig: ChartDataConfig{
-			LabelRegexp:  regexp.MustCompile("^lab"),
+			LabelGlob:    "lab*",
+			LabelRegexp:  regexp.MustCompile(`^lab\d`),
 			BotName:      "golangcibot",
 			CreatedAfter: createdAfter,
 			Repository:   repo,

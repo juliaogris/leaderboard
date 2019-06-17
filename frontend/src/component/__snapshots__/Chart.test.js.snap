@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches Chart snapshot charts with unknown title 1`] = `
+Array [
+  <h2
+    className="f4 f3-ns fw6 pt4 pb2-ns"
+  >
+    <a
+      className="link black-80 hover-blue underline-hover"
+      href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      My Chart
+    </a>
+  </h2>,
+  <table
+    className="dt--fixed collapse f7 f6-ns"
+  >
+    <tbody>
+      <tr
+        className="w-100"
+      >
+        <td
+          className="w2 pr1 pt1"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/a"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="avatar"
+              className="h1 w1"
+            />
+          </a>
+        </td>
+        <td
+          className="w4 pt1 truncate"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/a"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            a
+          </a>
+        </td>
+        <td
+          className="w2 pt1"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Aa"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            1
+          </a>
+        </td>
+        <td
+          className="w-100"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Aa"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              className="bg-blue dim"
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "33.33333333333333%",
+                }
+              }
+            >
+               
+            </div>
+          </a>
+        </td>
+      </tr>
+      <tr
+        className="w-100"
+      >
+        <td
+          className="w2 pr1 pt1"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/b"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="avatar"
+              className="h1 w1"
+            />
+          </a>
+        </td>
+        <td
+          className="w4 pt1 truncate"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/b"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            b
+          </a>
+        </td>
+        <td
+          className="w2 pt1"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Ab"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            2
+          </a>
+        </td>
+        <td
+          className="w-100"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Ab"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              className="bg-blue dim"
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "66.66666666666666%",
+                }
+              }
+            >
+               
+            </div>
+          </a>
+        </td>
+      </tr>
+      <tr
+        className="w-100"
+      >
+        <td
+          className="w2 pr1 pt1"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href=""
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="avatar"
+              className="h1 w1"
+              src="missing-avatar-url"
+            />
+          </a>
+        </td>
+        <td
+          className="w4 pt1 truncate"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href=""
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            c
+          </a>
+        </td>
+        <td
+          className="w2 pt1"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Ac"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            3
+          </a>
+        </td>
+        <td
+          className="w-100"
+        >
+          <a
+            className="link black-80 hover-blue underline-hover"
+            href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr%20created%3A%3E2019-05-15%20reviewed-by%3Ac"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              className="bg-blue dim"
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "100%",
+                }
+              }
+            >
+               
+            </div>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>,
+]
+`;
+
+exports[`matches Heading snapshot 1`] = `
+<h2
+  className="f4 f3-ns fw6 pt4 pb2-ns"
+>
+  Code Reviews
+</h2>
+`;

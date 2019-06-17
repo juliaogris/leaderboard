@@ -1,0 +1,805 @@
+{
+  "id": "go-course-469e43282371d97d",
+  "authors": {
+    "CameronSchafer": {
+      "login": "CameronSchafer",
+      "url": "https://github.com/CameronSchafer",
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/22388715?v=4"
+    },
+    "Jake88": {
+      "login": "Jake88",
+      "url": "https://github.com/Jake88",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/6849798?v=4"
+    },
+    "Joshcarp": {
+      "login": "Joshcarp",
+      "url": "https://github.com/Joshcarp",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/32605850?v=4"
+    },
+    "Sarahdavy1983": {
+      "login": "Sarahdavy1983",
+      "url": "https://github.com/Sarahdavy1983",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/44688371?v=4"
+    },
+    "anzboi": {
+      "login": "anzboi",
+      "url": "https://github.com/anzboi",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/43394287?v=4"
+    },
+    "anzdaddy": {
+      "login": "anzdaddy",
+      "url": "https://github.com/anzdaddy",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/13160581?v=4"
+    },
+    "brnbke": {
+      "login": "brnbke",
+      "url": "https://github.com/brnbke",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/50312831?v=4"
+    },
+    "brvishnu92": {
+      "login": "brvishnu92",
+      "url": "https://github.com/brvishnu92",
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/32426201?v=4"
+    },
+    "camh-": {
+      "login": "camh-",
+      "url": "https://github.com/camh-",
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/919357?v=4"
+    },
+    "camh-anz": {
+      "login": "camh-anz",
+      "url": "https://github.com/camh-anz",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/35285934?v=4"
+    },
+    "choohy": {
+      "login": "choohy",
+      "url": "https://github.com/choohy",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/39486041?v=4"
+    },
+    "cuminandpaprika": {
+      "login": "cuminandpaprika",
+      "url": "https://github.com/cuminandpaprika",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/25007585?v=4"
+    },
+    "davidbroughsmyth": {
+      "login": "davidbroughsmyth",
+      "url": "https://github.com/davidbroughsmyth",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/8267106?v=4"
+    },
+    "eastrd": {
+      "login": "eastrd",
+      "url": "https://github.com/eastrd",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/13502460?v=4"
+    },
+    "golangcibot": {
+      "login": "golangcibot",
+      "url": "https://github.com/golangcibot",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/42910462?v=4"
+    },
+    "hsy3418": {
+      "login": "hsy3418",
+      "url": "https://github.com/hsy3418",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/15043076?v=4"
+    },
+    "jessodri": {
+      "login": "jessodri",
+      "url": "https://github.com/jessodri",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/30883219?v=4"
+    },
+    "joel00wood": {
+      "login": "joel00wood",
+      "url": "https://github.com/joel00wood",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/1335734?v=4"
+    },
+    "jonathanheaden": {
+      "login": "jonathanheaden",
+      "url": "https://github.com/jonathanheaden",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/6761609?v=4"
+    },
+    "juliaogris": {
+      "login": "juliaogris",
+      "url": "https://github.com/juliaogris",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/1596871?v=4"
+    },
+    "k-vikingsson": {
+      "login": "k-vikingsson",
+      "url": "https://github.com/k-vikingsson",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/27333450?v=4"
+    },
+    "kasunfdo": {
+      "login": "kasunfdo",
+      "url": "https://github.com/kasunfdo",
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/12541716?v=4"
+    },
+    "leonarj4": {
+      "login": "leonarj4",
+      "url": "https://github.com/leonarj4",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/51217403?v=4"
+    },
+    "lexual": {
+      "login": "lexual",
+      "url": "https://github.com/lexual",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/410907?v=4"
+    },
+    "luliangLi": {
+      "login": "luliangLi",
+      "url": "https://github.com/luliangLi",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/45423587?v=4"
+    },
+    "marcelocantos": {
+      "login": "marcelocantos",
+      "url": "https://github.com/marcelocantos",
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/215143?v=4"
+    },
+    "marksomething": {
+      "login": "marksomething",
+      "url": "https://github.com/marksomething",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/3917974?v=4"
+    },
+    "mohitnag": {
+      "login": "mohitnag",
+      "url": "https://github.com/mohitnag",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/35451723?v=4"
+    },
+    "n0npax": {
+      "login": "n0npax",
+      "url": "https://github.com/n0npax",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/10343861?v=4"
+    },
+    "nicholascross": {
+      "login": "nicholascross",
+      "url": "https://github.com/nicholascross",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/1947184?v=4"
+    },
+    "nicko-lee": {
+      "login": "nicko-lee",
+      "url": "https://github.com/nicko-lee",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/37054216?v=4"
+    },
+    "ovlords": {
+      "login": "ovlords",
+      "url": "https://github.com/ovlords",
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/9046325?v=4"
+    },
+    "pentaphobe": {
+      "login": "pentaphobe",
+      "url": "https://github.com/pentaphobe",
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/418523?v=4"
+    },
+    "pfannerj": {
+      "login": "pfannerj",
+      "url": "https://github.com/pfannerj",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/44220238?v=4"
+    },
+    "raghunadhpokkalath": {
+      "login": "raghunadhpokkalath",
+      "url": "https://github.com/raghunadhpokkalath",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/12414382?v=4"
+    },
+    "ranjanasj": {
+      "login": "ranjanasj",
+      "url": "https://github.com/ranjanasj",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/10557205?v=4"
+    },
+    "rokane": {
+      "login": "rokane",
+      "url": "https://github.com/rokane",
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/11910247?v=4"
+    },
+    "runnerdave": {
+      "login": "runnerdave",
+      "url": "https://github.com/runnerdave",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/14068808?v=4"
+    },
+    "saurabhvyas9": {
+      "login": "saurabhvyas9",
+      "url": "https://github.com/saurabhvyas9",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/38361363?v=4"
+    },
+    "shampa077": {
+      "login": "shampa077",
+      "url": "https://github.com/shampa077",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/5608429?v=4"
+    },
+    "shuutech": {
+      "login": "shuutech",
+      "url": "https://github.com/shuutech",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/41457086?v=4"
+    },
+    "sirigithub": {
+      "login": "sirigithub",
+      "url": "https://github.com/sirigithub",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/6692661?v=4"
+    },
+    "srihariInfy": {
+      "login": "srihariInfy",
+      "url": "https://github.com/srihariInfy",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/32757634?v=4"
+    },
+    "sriyapaka": {
+      "login": "sriyapaka",
+      "url": "https://github.com/sriyapaka",
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/37731882?v=4"
+    },
+    "undrewb": {
+      "login": "undrewb",
+      "url": "https://github.com/undrewb",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/689841?v=4"
+    },
+    "willshen8": {
+      "login": "willshen8",
+      "url": "https://github.com/willshen8",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/30467958?v=4"
+    },
+    "zhukaisjtu": {
+      "login": "zhukaisjtu",
+      "url": "https://github.com/zhukaisjtu",
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/8910124?v=4"
+    }
+  },
+  "charts": [
+    {
+      "title": "Merged Pull Requests",
+      "maxCount": 5,
+      "totalCount": 28,
+      "points": [
+        {
+          "author": "n0npax",
+          "count": 5
+        },
+        {
+          "author": "nicholascross",
+          "count": 4
+        },
+        {
+          "author": "kasunfdo",
+          "count": 3
+        },
+        {
+          "author": "willshen8",
+          "count": 3
+        },
+        {
+          "author": "lexual",
+          "count": 2
+        },
+        {
+          "author": "CameronSchafer",
+          "count": 1
+        },
+        {
+          "author": "Jake88",
+          "count": 1
+        },
+        {
+          "author": "brvishnu92",
+          "count": 1
+        },
+        {
+          "author": "davidbroughsmyth",
+          "count": 1
+        },
+        {
+          "author": "jessodri",
+          "count": 1
+        },
+        {
+          "author": "jonathanheaden",
+          "count": 1
+        },
+        {
+          "author": "marksomething",
+          "count": 1
+        },
+        {
+          "author": "ovlords",
+          "count": 1
+        },
+        {
+          "author": "pfannerj",
+          "count": 1
+        },
+        {
+          "author": "ranjanasj",
+          "count": 1
+        },
+        {
+          "author": "runnerdave",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "title": "Merged or Open Pull Requests",
+      "maxCount": 7,
+      "totalCount": 121,
+      "points": [
+        {
+          "author": "n0npax",
+          "count": 7
+        },
+        {
+          "author": "brvishnu92",
+          "count": 6
+        },
+        {
+          "author": "kasunfdo",
+          "count": 6
+        },
+        {
+          "author": "lexual",
+          "count": 6
+        },
+        {
+          "author": "nicholascross",
+          "count": 6
+        },
+        {
+          "author": "CameronSchafer",
+          "count": 5
+        },
+        {
+          "author": "Joshcarp",
+          "count": 5
+        },
+        {
+          "author": "jessodri",
+          "count": 5
+        },
+        {
+          "author": "joel00wood",
+          "count": 5
+        },
+        {
+          "author": "luliangLi",
+          "count": 5
+        },
+        {
+          "author": "marksomething",
+          "count": 5
+        },
+        {
+          "author": "pfannerj",
+          "count": 5
+        },
+        {
+          "author": "runnerdave",
+          "count": 5
+        },
+        {
+          "author": "shampa077",
+          "count": 5
+        },
+        {
+          "author": "shuutech",
+          "count": 5
+        },
+        {
+          "author": "willshen8",
+          "count": 5
+        },
+        {
+          "author": "brnbke",
+          "count": 4
+        },
+        {
+          "author": "hsy3418",
+          "count": 4
+        },
+        {
+          "author": "jonathanheaden",
+          "count": 3
+        },
+        {
+          "author": "Sarahdavy1983",
+          "count": 2
+        },
+        {
+          "author": "choohy",
+          "count": 2
+        },
+        {
+          "author": "eastrd",
+          "count": 2
+        },
+        {
+          "author": "mohitnag",
+          "count": 2
+        },
+        {
+          "author": "ranjanasj",
+          "count": 2
+        },
+        {
+          "author": "saurabhvyas9",
+          "count": 2
+        },
+        {
+          "author": "Jake88",
+          "count": 1
+        },
+        {
+          "author": "cuminandpaprika",
+          "count": 1
+        },
+        {
+          "author": "davidbroughsmyth",
+          "count": 1
+        },
+        {
+          "author": "leonarj4",
+          "count": 1
+        },
+        {
+          "author": "nicko-lee",
+          "count": 1
+        },
+        {
+          "author": "ovlords",
+          "count": 1
+        },
+        {
+          "author": "raghunadhpokkalath",
+          "count": 1
+        },
+        {
+          "author": "sirigithub",
+          "count": 1
+        },
+        {
+          "author": "srihariInfy",
+          "count": 1
+        },
+        {
+          "author": "sriyapaka",
+          "count": 1
+        },
+        {
+          "author": "undrewb",
+          "count": 1
+        },
+        {
+          "author": "zhukaisjtu",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "title": "Code Reviews",
+      "maxCount": 65,
+      "totalCount": 672,
+      "points": [
+        {
+          "author": "n0npax",
+          "count": 65
+        },
+        {
+          "author": "juliaogris",
+          "count": 53
+        },
+        {
+          "author": "nicholascross",
+          "count": 42
+        },
+        {
+          "author": "pfannerj",
+          "count": 33
+        },
+        {
+          "author": "willshen8",
+          "count": 33
+        },
+        {
+          "author": "pentaphobe",
+          "count": 32
+        },
+        {
+          "author": "lexual",
+          "count": 31
+        },
+        {
+          "author": "marksomething",
+          "count": 30
+        },
+        {
+          "author": "brvishnu92",
+          "count": 27
+        },
+        {
+          "author": "rokane",
+          "count": 27
+        },
+        {
+          "author": "Joshcarp",
+          "count": 26
+        },
+        {
+          "author": "anzboi",
+          "count": 22
+        },
+        {
+          "author": "CameronSchafer",
+          "count": 21
+        },
+        {
+          "author": "runnerdave",
+          "count": 19
+        },
+        {
+          "author": "jonathanheaden",
+          "count": 18
+        },
+        {
+          "author": "kasunfdo",
+          "count": 18
+        },
+        {
+          "author": "shampa077",
+          "count": 18
+        },
+        {
+          "author": "undrewb",
+          "count": 18
+        },
+        {
+          "author": "joel00wood",
+          "count": 17
+        },
+        {
+          "author": "camh-anz",
+          "count": 16
+        },
+        {
+          "author": "saurabhvyas9",
+          "count": 15
+        },
+        {
+          "author": "shuutech",
+          "count": 11
+        },
+        {
+          "author": "cuminandpaprika",
+          "count": 10
+        },
+        {
+          "author": "eastrd",
+          "count": 10
+        },
+        {
+          "author": "raghunadhpokkalath",
+          "count": 9
+        },
+        {
+          "author": "brnbke",
+          "count": 8
+        },
+        {
+          "author": "hsy3418",
+          "count": 7
+        },
+        {
+          "author": "zhukaisjtu",
+          "count": 7
+        },
+        {
+          "author": "jessodri",
+          "count": 6
+        },
+        {
+          "author": "Jake88",
+          "count": 4
+        },
+        {
+          "author": "Sarahdavy1983",
+          "count": 3
+        },
+        {
+          "author": "anzdaddy",
+          "count": 3
+        },
+        {
+          "author": "davidbroughsmyth",
+          "count": 3
+        },
+        {
+          "author": "luliangLi",
+          "count": 3
+        },
+        {
+          "author": "choohy",
+          "count": 2
+        },
+        {
+          "author": "ranjanasj",
+          "count": 2
+        },
+        {
+          "author": "camh-",
+          "count": 1
+        },
+        {
+          "author": "marcelocantos",
+          "count": 1
+        },
+        {
+          "author": "sriyapaka",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "title": "Code Review Comments",
+      "maxCount": 148,
+      "totalCount": 1533,
+      "points": [
+        {
+          "author": "juliaogris",
+          "count": 148
+        },
+        {
+          "author": "n0npax",
+          "count": 140
+        },
+        {
+          "author": "rokane",
+          "count": 86
+        },
+        {
+          "author": "marksomething",
+          "count": 82
+        },
+        {
+          "author": "nicholascross",
+          "count": 80
+        },
+        {
+          "author": "Joshcarp",
+          "count": 79
+        },
+        {
+          "author": "willshen8",
+          "count": 73
+        },
+        {
+          "author": "anzboi",
+          "count": 68
+        },
+        {
+          "author": "lexual",
+          "count": 66
+        },
+        {
+          "author": "pfannerj",
+          "count": 61
+        },
+        {
+          "author": "brvishnu92",
+          "count": 57
+        },
+        {
+          "author": "pentaphobe",
+          "count": 52
+        },
+        {
+          "author": "camh-anz",
+          "count": 48
+        },
+        {
+          "author": "kasunfdo",
+          "count": 44
+        },
+        {
+          "author": "CameronSchafer",
+          "count": 42
+        },
+        {
+          "author": "runnerdave",
+          "count": 42
+        },
+        {
+          "author": "joel00wood",
+          "count": 38
+        },
+        {
+          "author": "undrewb",
+          "count": 37
+        },
+        {
+          "author": "shampa077",
+          "count": 34
+        },
+        {
+          "author": "jonathanheaden",
+          "count": 31
+        },
+        {
+          "author": "saurabhvyas9",
+          "count": 30
+        },
+        {
+          "author": "anzdaddy",
+          "count": 24
+        },
+        {
+          "author": "shuutech",
+          "count": 20
+        },
+        {
+          "author": "cuminandpaprika",
+          "count": 19
+        },
+        {
+          "author": "brnbke",
+          "count": 18
+        },
+        {
+          "author": "raghunadhpokkalath",
+          "count": 17
+        },
+        {
+          "author": "eastrd",
+          "count": 16
+        },
+        {
+          "author": "hsy3418",
+          "count": 14
+        },
+        {
+          "author": "zhukaisjtu",
+          "count": 14
+        },
+        {
+          "author": "jessodri",
+          "count": 12
+        },
+        {
+          "author": "Jake88",
+          "count": 10
+        },
+        {
+          "author": "Sarahdavy1983",
+          "count": 6
+        },
+        {
+          "author": "luliangLi",
+          "count": 6
+        },
+        {
+          "author": "marcelocantos",
+          "count": 6
+        },
+        {
+          "author": "davidbroughsmyth",
+          "count": 5
+        },
+        {
+          "author": "choohy",
+          "count": 3
+        },
+        {
+          "author": "ranjanasj",
+          "count": 3
+        },
+        {
+          "author": "camh-",
+          "count": 1
+        },
+        {
+          "author": "sriyapaka",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "botComments": 255,
+  "config": {
+    "labelGlob": "lab*",
+    "botName": "golangcibot",
+    "createdAfter": "2019-05-15T00:00:00Z",
+    "repository": {
+      "name": "go-course",
+      "owner": "anz-bank",
+      "url": "https://github.com/anz-bank/go-course"
+    }
+  }
+}

@@ -26,6 +26,7 @@ func main() {
 	fmt.Println()
 	fmt.Println("Aggregated chart data since", cfg.ChartConfig.CreatedAfter.Format("2006-01-02"))
 	fmt.Println("======================================")
+	fmt.Println("chart data id:            ", chartData.ID)
 	fmt.Println("authors count:            ", len(chartData.Authors))
 	fmt.Println("golangcibot comment count:", chartData.BotCommentCount)
 	fmt.Println("total unfiltered PR count:", len(prs))

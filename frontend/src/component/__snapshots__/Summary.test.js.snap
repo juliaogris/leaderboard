@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot charts 1`] = `
+Array [
+  <p
+    className="lh-copy measure"
+  >
+    <b>
+      5
+       people
+       
+      <a
+        className="link black-80 hover-blue underline-hover b"
+        href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr+is%3Amerged+created%3A>2019-05-15"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        merged 
+        16
+         Pull Requests
+      </a>
+    </b>
+    , with a highest individual contribution of 
+    4
+    . There are an additional
+     
+    <a
+      className="link black-80 hover-blue underline-hover b"
+      href="https://github.com/anz-bank/go-course/pulls?q=is%3Apr+is%3Aopen+created%3A>2019-05-15"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      57
+       open PRs
+    </a>
+     in the works. The highest individual contribution of open and merged PRs is
+     
+    5
+    .
+  </p>,
+  <p
+    className="lh-copy measure"
+  >
+    <b>
+      3
+       authors
+    </b>
+     created
+    <b>
+       382 Code Reviews
+    </b>
+     and
+    <b>
+       852 Code Review Comments
+    </b>
+    .
+     
+    <a
+      className="link black-80 hover-blue underline-hover ttc nowrap"
+      href="https://github.com/golangcibot"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="avatar"
+        className="h1 w1 ph1"
+        src="https://avatars1.githubusercontent.com/u/42910462?v=4"
+      />
+      golangcibot
+    </a>
+     
+    made
+    2000
+     comments.
+  </p>,
+  <p
+    className="lh-copy measure-wide f6 i"
+  >
+    PRs have been filtered by labels matching 
+    <code
+      className="f7 fs-normal ba b--black-20 br1 ph1"
+    >
+      lab.*
+    </code>
+     
+    and creation date after 
+    <code
+      className="f7 fs-normal ba b--black-20 br1 ph1"
+    >
+      2019-05-15
+    </code>
+  </p>,
+]
+`;
+
+exports[`matches snapshot charts with unknown title 1`] = `
+<p
+  className="lh-copy measure-wide f6 i"
+>
+  PRs have been filtered by labels matching 
+  <code
+    className="f7 fs-normal ba b--black-20 br1 ph1"
+  >
+    lab.*
+  </code>
+   
+  and creation date after 
+  <code
+    className="f7 fs-normal ba b--black-20 br1 ph1"
+  >
+    2019-05-15
+  </code>
+</p>
+`;
+
+exports[`matches snapshot for empty charts array 1`] = `null`;

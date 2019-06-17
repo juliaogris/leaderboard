@@ -15,6 +15,8 @@ cover: node_modules
 	yarn cover
 start: node_modules
 	yarn start
+serve-build: build
+	yarn serve-build
 install: node_modules
 node_modules: package.json
 	yarn

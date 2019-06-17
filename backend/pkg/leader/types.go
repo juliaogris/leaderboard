@@ -1,6 +1,8 @@
 package leader
 
 import (
+	"fmt"
+	"hash/fnv"
 	"regexp"
 	"sort"
 	"time"
@@ -57,16 +59,17 @@ type Label struct {
 type Author struct {
 	Login     string `json:"login"`
 	URL       string `json:"url"`
-	AvatarURL string `json:"avatarURL"`
+	AvatarURL string `json:"avatarUrl"`
 }
 
 // ChartData holds all aggregate PR, review and comment data relevant to
 // visualisation.
 type ChartData struct {
+	ID              string            `json:"id"`
 	Authors         map[string]Author `json:"authors"` // keyed by author.login (github username)
-	Charts          []Chart           `json:"chart"`
+	Charts          []Chart           `json:"charts"`
 	BotCommentCount int               `json:"botComments"`
-	Repository      Repository        `json:"repository"`
+	Config          ChartDataConfig   `json:"config"`
 }
 
 // Chart contains data points, aggregated and meta data for charting.
@@ -141,10 +144,11 @@ func ChartDataFromPRs(gqlPRs []PRNode, config ChartDataConfig) ChartData {
 	delete(countByAuthor.comment, config.BotName)
 	delete(countByAuthor.review, config.BotName)
 	return ChartData{
+		ID:              chartID(config),
 		Authors:         authors,
 		BotCommentCount: botCommentCount,
 		Charts:          charts(countByAuthor),
-		Repository:      config.Repository,
+		Config:          config,
 	}
 }
 
@@ -182,7 +186,12 @@ func chart(countByAuthor map[string]int, title string) Chart {
 		total += count
 		i++
 	}
-	sort.Slice(points, func(i, j int) bool { return points[i].Count > points[j].Count })
+	sort.Slice(points, func(i, j int) bool {
+		if points[i].Count == points[j].Count {
+			return points[i].Author < points[j].Author
+		}
+		return points[i].Count > points[j].Count
+	})
 	return Chart{
 		Title:      title,
 		Points:     points,
@@ -201,4 +210,12 @@ func hasLabLabel(labels []Label, re *regexp.Regexp) bool {
 		}
 	}
 	return false
+}
+
+func chartID(config ChartDataConfig) string {
+	h := fnv.New64a()
+	s := fmt.Sprintf("%v", config)
+	_, _ = h.Write([]byte(s))
+	hash := h.Sum64()
+	return fmt.Sprintf("%s-%x", config.Repository.Name, hash)
 }
