@@ -2,10 +2,10 @@
 
 _Leaderboard_ aggregates data by GitHub user on:
 
--   merged PRs (Pull Requests)
--   open and merged PRs
--   PR reviews
--   PR review comments
+- merged PRs (Pull Requests)
+- open and merged PRs
+- PR reviews
+- PR review comments
 
 on [anz-bank/go-course](https://github.com/anz-bank/go-course).
 
@@ -27,9 +27,9 @@ and transformation into aggregated, chartable data.
 
 #### Prerequisites
 
--   Install [go 1.12](https://golang.org/doc/install)
--   Install [golangci-lint 1.16](https://github.com/golangci/golangci-lint#install)
--   Install `make`
+- Install [go 1.12](https://golang.org/doc/install)
+- Install [golangci-lint 1.16](https://github.com/golangci/golangci-lint#install)
+- Install `make`
 
 #### Make
 
@@ -60,9 +60,9 @@ interactive SVG bar charts.
 
 #### Prerequisites
 
--   Install [node.js](https://nodejs.org)
--   Install [yarn](https://yarnpkg.com)
--   Install `make`
+- Install [node.js](https://nodejs.org)
+- Install [yarn](https://yarnpkg.com)
+- Install `make`
 
 #### Make
 
@@ -106,3 +106,7 @@ Builds can bet triggered locally with:
     gcloud builds submit
 
 `.gcloudignore` holds files not to be uploaded to Cloudbuilds (`.git`, `frontend/node_modules`).
+
+## Acknowledgement
+
+This was @camh-anz's idea. Thank you!
