@@ -11,7 +11,7 @@ import (
 // Config returns configuration for retrieving data via GitHub API (query)
 // and building aggregated Chart Data
 func Config() (Configuration, error) {
-	// todo(juliaogris): Read from config file and/or command line
+	// TODO(juliaogris): Read from config file and/or command line
 	initialCursor := ""
 	createdAfter, _ := time.Parse(time.RFC3339, "2019-05-15T00:00:00Z")
 	labelGlob := `lab*`
