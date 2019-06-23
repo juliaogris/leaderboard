@@ -107,6 +107,33 @@ Builds can bet triggered locally with:
 
 `.gcloudignore` holds files not to be uploaded to Cloudbuilds (`.git`, `frontend/node_modules`).
 
+## Deployment
+
+The build output of frontend has been manually deployed to Google Cloud storage
+bucket `leader.go-course.org`.
+The backend is deployed as Google Cloud function with HTTP trigger:
+
+    gcloud functions deploy LeaderboardHTTP \
+        --runtime go111 \
+        --timeout=300 \
+        --trigger-http \
+        --set-env-vars=GITHUB_TOKEN=$GITHUB_TOKEN
+
+It is also deployed as Google Cloud function with PubSub event trigger to be used
+with Google Cloud Scheduler:
+
+    gcloud functions deploy LeaderboardEvent \
+        --runtime go111 \
+        --timeout=300 \
+        --trigger-topic=schedule \
+        --set-env-vars=GITHUB_TOKEN=$GITHUB_TOKEN
+
+`$GITHUB_TOKEN` must contain a valid GitHub access token.
+
+The linked Google Cloud build project is
+[`gotraining`](https://console.cloud.google.com/functions/list?project=gotraining),
+request access from [@juliaogris](https://github.com/juliaogris) if needed.
+
 ## Acknowledgement
 
 This was @camh-anz's idea. Thank you!
