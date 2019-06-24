@@ -64,8 +64,7 @@ const ReviewSummary = ({ review, comment, bot }) =>
         <img src={bot.avatarUrl} alt="avatar" className="h1 w1 ph1" />
         {bot.login}
       </Link>{" "}
-      made
-      {bot.comments} comments.
+      made {bot.comments} comments.
     </P>
   )
 
