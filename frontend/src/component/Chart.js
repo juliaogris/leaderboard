@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 
-// todo(juliaogrs): Use URL (pattern) provided in backend result for query generation.
+// TODO(juliaogrs): Use URL (pattern) provided in backend result for query generation.
 const getPrQuery = (title, createdAfter) => {
   if (title === "Merged Pull Requests") {
     return `is:pr is:merged created:>${createdAfter}`

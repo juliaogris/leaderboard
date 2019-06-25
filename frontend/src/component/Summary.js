@@ -8,7 +8,7 @@ const Summary = ({ charts, config, bot }) => {
     obj[chart.title] = chart
     return obj
   }, {})
-  // todo(#7): Make charts generic
+  // TODO(#7): Make charts generic
   const pr = chartsByTitle["Merged Pull Requests"] || null
   const open = chartsByTitle["Merged or Open Pull Requests"] || null
   const review = chartsByTitle["Code Reviews"] || null

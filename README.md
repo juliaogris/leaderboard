@@ -2,10 +2,10 @@
 
 _Leaderboard_ aggregates data by GitHub user on:
 
--   merged PRs (Pull Requests)
--   open and merged PRs
--   PR reviews
--   PR review comments
+- merged PRs (Pull Requests)
+- open and merged PRs
+- PR reviews
+- PR review comments
 
 on [anz-bank/go-course](https://github.com/anz-bank/go-course).
 
@@ -27,9 +27,9 @@ and transformation into aggregated, chartable data.
 
 #### Prerequisites
 
--   Install [go 1.12](https://golang.org/doc/install)
--   Install [golangci-lint 1.16](https://github.com/golangci/golangci-lint#install)
--   Install `make`
+- Install [go 1.12](https://golang.org/doc/install)
+- Install [golangci-lint 1.16](https://github.com/golangci/golangci-lint#install)
+- Install `make`
 
 #### Make
 
@@ -60,9 +60,9 @@ interactive SVG bar charts.
 
 #### Prerequisites
 
--   Install [node.js](https://nodejs.org)
--   Install [yarn](https://yarnpkg.com)
--   Install `make`
+- Install [node.js](https://nodejs.org)
+- Install [yarn](https://yarnpkg.com)
+- Install `make`
 
 #### Make
 
@@ -106,3 +106,34 @@ Builds can bet triggered locally with:
     gcloud builds submit
 
 `.gcloudignore` holds files not to be uploaded to Cloudbuilds (`.git`, `frontend/node_modules`).
+
+## Deployment
+
+The build output of frontend has been manually deployed to Google Cloud storage
+bucket `leader.go-course.org`.
+The backend is deployed as Google Cloud function with HTTP trigger:
+
+    gcloud functions deploy LeaderboardHTTP \
+        --runtime go111 \
+        --timeout=300 \
+        --trigger-http \
+        --set-env-vars=GITHUB_TOKEN=$GITHUB_TOKEN
+
+It is also deployed as Google Cloud function with PubSub event trigger to be used
+with Google Cloud Scheduler:
+
+    gcloud functions deploy LeaderboardEvent \
+        --runtime go111 \
+        --timeout=300 \
+        --trigger-topic=schedule \
+        --set-env-vars=GITHUB_TOKEN=$GITHUB_TOKEN
+
+`$GITHUB_TOKEN` must contain a valid GitHub access token.
+
+The linked Google Cloud build project is
+[`gotraining`](https://console.cloud.google.com/functions/list?project=gotraining),
+request access from [@juliaogris](https://github.com/juliaogris) if needed.
+
+## Acknowledgement
+
+This was @camh-anz's idea. Thank you!

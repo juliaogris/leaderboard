@@ -7,8 +7,8 @@ import (
 
 func buildQueryPattern(owner, name string) string {
 	s := fmt.Sprintf(gqlFragment, owner, name)
-	s = strings.ReplaceAll(s, `"`, `\"`)
-	s = strings.ReplaceAll(s, "\n", " ")
+	s = strings.Replace(s, `"`, `\"`, -1)
+	s = strings.Replace(s, "\n", " ", -1)
 	return fmt.Sprintf(`{ "query": "query %s"}`, s)
 }
 
