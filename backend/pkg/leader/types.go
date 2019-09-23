@@ -136,7 +136,11 @@ func ChartDataFromPRs(gqlPRs []PRNode, config ChartDataConfig) ChartData {
 			countByAuthor.open[author]++
 		}
 		for _, review := range pr.Reviews.ReviewNodes {
+			// Don't count reviews on own PRs. These occur when you respond to comments.
 			author := review.Author.Login
+			if author == pr.Author.Login {
+				continue
+			}
 			authors[author] = review.Author
 			countByAuthor.review[author]++
 			// Add 1 to comment count because the review itself must contain a "comment" which isn't counted.

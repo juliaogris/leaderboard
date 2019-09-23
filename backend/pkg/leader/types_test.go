@@ -161,6 +161,14 @@ const prResultFixture = `{
                     "avatarUrl": "https://avatars3.githubusercontent.com/u/215143?v=4"
                   },
                   "comments": { "totalCount": 5 }
+                },
+                {
+                  "author": {
+                    "login": "kasunfdo",
+                    "url": "https://github.com/kasunfdo",
+		    "avatarUrl": "https://avatars3.githubusercontent.com/u/12541716?v=4"
+                  },
+                  "comments": { "totalCount": 5 }
                 }
               ]
             },
