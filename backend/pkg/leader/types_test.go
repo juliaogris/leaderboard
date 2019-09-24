@@ -17,7 +17,7 @@ func TestTypes(t *testing.T) {
 	assert.JSONEq(t, prResultFixture, string(jsonStr))
 }
 
-func TestChartDataFromGQL(t *testing.T) {
+func TestChartDataFromGQL(t *testing.T) { //nolint:funlen
 	gql := graphQLdata{}
 	assert.NoError(t, json.Unmarshal([]byte(prResultFixture), &gql))
 	prs := gql.Data.Repository.PullRequests.PRNodes
@@ -159,6 +159,14 @@ const prResultFixture = `{
                     "login": "marcelocantos",
                     "url": "https://github.com/marcelocantos",
                     "avatarUrl": "https://avatars3.githubusercontent.com/u/215143?v=4"
+                  },
+                  "comments": { "totalCount": 5 }
+                },
+                {
+                  "author": {
+                    "login": "kasunfdo",
+                    "url": "https://github.com/kasunfdo",
+		    "avatarUrl": "https://avatars3.githubusercontent.com/u/12541716?v=4"
                   },
                   "comments": { "totalCount": 5 }
                 }

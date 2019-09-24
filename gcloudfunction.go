@@ -1,3 +1,5 @@
+// Package gcloudfunc contains the Google Cloud Function to generate the
+// leaderboard stats when triggered by a webhook.
 package gcloudfunc
 
 import (
@@ -83,11 +85,11 @@ func writeBucket(r io.Reader) error {
 	if err != nil {
 		return fmt.Errorf("writeBucket: cannot create bucket client: %s", err)
 	}
-	defer client.Close()
+	defer client.Close() //nolint:errcheck
 	bucket := client.Bucket(bucketName)
 	object := bucket.Object(objectName)
 	w := object.NewWriter(ctx)
-	defer w.Close()
+	defer w.Close() //nolint:errcheck
 	if _, err := io.Copy(w, r); err != nil {
 		return fmt.Errorf("writeBucket: cannot copy reader to bucket: %s", err)
 	}
