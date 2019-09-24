@@ -1,3 +1,6 @@
+// Package leader produces a leaderboard summary from a github repository's
+// pull requests as a JSON file. This file can be loaded by the react frontend
+// to display the summary.
 package leader
 
 import (
