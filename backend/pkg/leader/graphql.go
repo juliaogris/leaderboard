@@ -40,14 +40,14 @@ const gqlFragment = `{
           url
           avatarUrl
         }
-        reviews(first: 20) {
+        reviews(first: 100) {
           nodes {
             author {
               login
               url
               avatarUrl
             }
-            comments(first: 60) {
+            comments {
               totalCount
             }
           }
