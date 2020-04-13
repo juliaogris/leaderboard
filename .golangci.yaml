@@ -3,4 +3,5 @@ issues:
 linters:
   enable-all: true
   disable:
-    gochecknoglobals
+  - gochecknoglobals
+  - wsl
