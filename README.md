@@ -1,3 +1,9 @@
+I really don't care much about this repo anymore, but the amount of security alerts I had on it
+because of old, bad npm modules..... it concerns me. Don't want any of this again.
+But what is security anyway.
+
+Ok, bye leaderboard, you come form a time where I tought I could fit it. :sad:
+
 # Leaderboard
 
 _Leaderboard_ aggregates data by GitHub user on:
